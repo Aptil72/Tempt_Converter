@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Degree to Farenheit</title>
+   <link rel="stylesheet" type="text/css" href="tempt.css">
+</head>
+<body>
+<div id="page_wrap">
+<form>
+<table class="design">
+ <tr>
+ <td class="align"><label for="name"><b>Temperature Converter
+</label></td>
+ </tr>
+ </table>
+ <br>
+<hr>
+<p class="style">Type value in field to convert from Fahrenheit to Celsius and  from Fahrenheit to Kelvin:</p>
+<p>
+  <label>Fahrenheit :</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius :<span id="outputCelcius"></span>
+  
+<p>Kelvin: <span id="outputKelvin"></span></p>
+
+<button onclick="document.getElementById('myInput').value = ''">Clear</button>
+
+<hr>
+<label class="name">copyright 2018:Amruta</label>
+
+</form>
+</div><br><br><br><br><br><br>
+<footer role="contentinfo" id="page_footer">
+<p>amrutapatil1720@gmail.com</p>
+    
+  <svg viewBox="0 0 32 32" width="32" height="35" fill="currentcolor">
+    
+
+  </footer>
+  <!--<script type="text/javascript" src="temp.js"></script>-->
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  var celsius=(valNum-32)/1.8;
+  document.getElementById("outputCelcius").innerHTML=celsius;
+  var kelvin=(valNum-32)/1.8+273.15;
+  document.getElementById("outputKelvin").innerHTML=kelvin;
+}
+
+</script>
+</body>
+</html>
+
