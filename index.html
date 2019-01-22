@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Degree to Farenheit</title>
-   <link rel="stylesheet" type="text/css" href="tempt.css">
-</head>
-<body>
-<div id="page_wrap">
-<form>
-<table class="design">
- <tr>
- <td class="align"><label for="name"><b>Temperature Converter
-</label></td>
- </tr>
- </table>
- <br>
-<hr>
-<p class="style">Type value in field to convert from Fahrenheit to Celsius and  from Fahrenheit to Kelvin:</p>
-<p>
-  <label>Fahrenheit :</label>
-  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
-</p>
-<p>Celcius :<span id="outputCelcius"></span>
+	<head>
+		<title>Degree to Farenheit</title>
+		<link rel="stylesheet" type="text/css" href="tempt.css">
+	</head>
+	<body>
+		<div id="page_wrap">
+		<form>
+			<table class="design">
+			<tr>
+				<td class="align"><label for="name"><b>Temperature Converter</label></td>
+			</tr>
+			</table>
+			<br>
+			<hr>
+			<p class="style">Type value in field to convert from Fahrenheit to Celsius & Kelvin and vice-a-versa:</p>
+			<p>
+				<label>Fahrenheit :</label>
+				<input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="farToCelToKel(this.value)" onchange="farToCelToKel(this.value)">
+			</p>
+			<p>
+				<label>Celsius :</label>
+				<input id="inputCelsius" type="number" placeholder="Celsius" oninput="celToFarToKel(this.value)" onchange="celToFarToKel(this.value)">
+			</p>
+			<p>
+				<label>Kelvin :</label>
+				<input id="inputKelvin" type="number" placeholder="Kelvin" oninput="kelToFarToCel(this.value)" onchange="kelToFarToCel(this.value)">
+			</p>
   
-<p>Kelvin: <span id="outputKelvin"></span></p>
+			<button onclick="clearVal()">Clear</button>
+			<hr>
+			<label class="name">copyright 2018:Amruta</label>
 
-<button onclick="document.getElementById('myInput').value = ''">Clear</button>
-
-<hr>
-<label class="name">copyright 2018:Amruta</label>
-
-</form>
-</div><br><br><br><br><br><br>
-<footer role="contentinfo" id="page_footer">
-<p>amrutapatil1720@gmail.com</p>
-    
-  <svg viewBox="0 0 32 32" width="32" height="35" fill="currentcolor">
-    
-
+		</form>
+	</div>
+	<footer>
+<br><br><br><br><br><br>
+    <a href="file:///C:/Users/Amruta/Desktop/JOB/git/aptil72.github.io/home.html" id="box_1">
+      Home
+    </a>
+    <a href="https://github.com/amrutapatil1720/" id="box_2">
+      Github
+    </a>
+	<p class="size">Created By : Amruta Patil</p>
+  <p class="size">contact Information: <a href ="mailto:amrutapatil1720@gmail.com">amrutapatil1720@gmail.com</a></p><br><br>
   </footer>
   <!--<script type="text/javascript" src="temp.js"></script>-->
 
-<script>
-function temperatureConverter(valNum) {
-  valNum = parseFloat(valNum);
-  var celsius=(valNum-32)/1.8;
-  document.getElementById("outputCelcius").innerHTML=celsius;
-  var kelvin=(valNum-32)/1.8+273.15;
-  document.getElementById("outputKelvin").innerHTML=kelvin;
-}
-
-</script>
-</body>
+	<script src="converter.js"></script>
+	</body>
 </html>
 
